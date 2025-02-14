@@ -5,7 +5,7 @@ This project sets up a React application with Vite, Tailwind CSS, React Query, R
 ## Project Structure
 
 - `package.json`: Project metadata and dependencies.
-- `sink.ts`: Script to set up the project.
+- `index.js`: Script to set up the project.
 
 ## Setup
 
