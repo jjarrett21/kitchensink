@@ -87,8 +87,8 @@ export default defineConfig({
 );
 fs.writeFileSync(viteConfigPath, updatedViteConfig);
 
-console.log("Updating App.tsx with Providers...");
-const appTsxPath = path.join(projectPath, "src", "App.tsx");
+console.log("Updating main.tsx with Providers...");
+const appTsxPath = path.join(projectPath, "src", "main.tsx");
 fs.writeFileSync(
   appTsxPath,
   `import { StrictMode } from "react";
@@ -105,7 +105,6 @@ createRoot(document.getElementById("root")!).render(
     <Router>
       <QueryClientProvider client={queryClient}>
           <App />
-        </FilterProvider>
       </QueryClientProvider>
     </Router>
   </StrictMode>
