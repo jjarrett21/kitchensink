@@ -4,7 +4,7 @@ const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 
-const projectName = process.argv[2] || "my-vite-app";
+const projectName = process.argv[2] || "my-vite-kitchen-sink-app";
 const customPackages = process.argv.slice(3).join(" ") || "";
 
 console.log(`Creating React Kitchen Sink project: ${projectName}...`);
