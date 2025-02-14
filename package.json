@@ -1,6 +1,6 @@
 {
   "name": "react-vite-kitchen-sink",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
-},
+  },
   "keywords": [],
   "author": "jjarrett21",
   "license": "ISC",
