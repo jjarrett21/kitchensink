@@ -14,7 +14,15 @@ execSync(`npx create-vite ${projectName} --template react-ts`, {
 
 const projectPath = path.join(process.cwd(), projectName);
 console.log(`Changing directory to: ${projectPath}`);
-process.chdir(projectPath);
+
+try {
+  process.chdir(projectPath);
+  console.log(`Successfully changed directory to ${projectPath}`);
+} catch (err) {
+  console.error(`Failed to change directory to ${projectPath}: ${err.message}`);
+  process.exit(1);
+}
+
 
 console.log(
   "Installing dependencies: Tailwind, react-query, react-router, and others..."
