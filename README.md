@@ -12,4 +12,5 @@ This project sets up a React application with Vite, Tailwind CSS, React Query, R
 To create a new project, run the following command:
 
 ```sh
+npm install -g react-vite-kitchen-sink
 npx react-vite-kitchen-sink <project-name> [additional-packages]
