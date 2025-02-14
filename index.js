@@ -13,6 +13,7 @@ execSync(`npx create-vite ${projectName} --template react-ts`, {
 });
 
 const projectPath = path.join(process.cwd(), projectName);
+console.log(`Changing directory to: ${projectPath}`);
 process.chdir(projectPath);
 
 console.log(
