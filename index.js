@@ -40,19 +40,29 @@ execSync(
 
 console.log("Setting up global styles...");
 const mainStylesPath = path.join(projectPath, "src", "index.css");
+const mainStylesContent = fs.existsSync(mainStylesPath)
+  ? fs.readFileSync(mainStylesPath, "utf-8")
+  : "";
 fs.writeFileSync(
   mainStylesPath,
-  `@tailwind base;
+  `@import "tailwindcss";
+@tailwind base;
 @tailwind components;
-@tailwind utilities;`
+@tailwind utilities;
+${mainStylesContent}`
 );
 
 const appStylesPath = path.join(projectPath, "src", "app.css");
+const appStylesContent = fs.existsSync(appStylesPath)
+  ? fs.readFileSync(appStylesPath, "utf-8")
+  : "";
 fs.writeFileSync(
   appStylesPath,
-  `@tailwind base;
+  `@import "tailwindcss";
+@tailwind base;
 @tailwind components;
-@tailwind utilities;`
+@tailwind utilities;
+${appStylesContent}`
 );
 
 console.log("Updating Vite config...");
