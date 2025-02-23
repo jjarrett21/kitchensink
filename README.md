@@ -15,6 +15,7 @@ To create a new project, run the following command:
 ```sh
 npm install -g react-vite-kitchen-sink
 react-vite-kitchen-sink
+```
 
 You will be prompted to enter the project name and any additional packages you want to install.
 
