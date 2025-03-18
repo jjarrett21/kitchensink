@@ -92,17 +92,16 @@ ${appStylesContent}`
 
     console.log("Updating Vite config...");
     const viteConfigPath = path.join(projectPath, "vite.config.ts");
-    const viteConfigContent = fs.readFileSync(viteConfigPath, "utf-8");
-    const updatedViteConfig = `
-/// <reference types="vitest" />
+    const viteConfigContent = `/// <reference types="vitest" />
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
-${viteConfigContent}
-`;
-    fs.writeFileSync(viteConfigPath, updatedViteConfig);
+export default defineConfig({
+  plugins: [react(), tailwindcss()],
+});`;
+    fs.writeFileSync(viteConfigPath, viteConfigContent);
 
     console.log("Updating main.tsx with Providers...");
     const appTsxPath = path.join(projectPath, "src", "main.tsx");
